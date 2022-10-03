@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+			font-weight: bold;
+			animation-name: example;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation: mymove 5s infinite;
+		}
+		span{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			animation-name: example;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			display: block;
+			}
+
+		@keyframes example {
+			0% {background-color: red;}
+			25% {background-color: blue;}
+			50% {background-color: green;}
+			75% {background-color: yellow;}
+			100% {background-color: darkorange;}
+
+		}
+		#div1 {	animation-timing-function: linear;}
+		#div2 {	animation-timing-function: ease;}
+		#div3 {	animation-timing-function: ease-in;}
+		#div4 {	animation-timing-function: ease-out;}
+		#div5 {	animation-timing-function: ease-in-out;}
+		@keyframes mymove {
+			from{left: 0px;}
+			to{left: 600px;}			
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"><span>linear</span></div>
+	<div id="div2"><span>ease</span></div>
+	<div id="div3"><span>ease-in</span></div>
+	<div id="div4"><span>ease-out</span></div>
+	<div id="div5"><span>ease-in-out</span></div>
+</body>
+</html>
